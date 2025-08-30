@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Ideas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6f0;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff6347;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff6347;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e5533d;
+    }
+    #recipe {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #333;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🍳 Recipe Idea Generator</h1>
+  <p>Click the button to get a new recipe idea!</p>
+  <button onclick="getRecipe()">Get Recipe Idea</button>
+
+  <div id="recipe"></div>
+
+  <script>
+    const recipes = [
+      
+      "Vegetable Stir Fry 🥦🥕",
+      "Chicken Curry 🍛",
+      "Mango Smoothie 🥭",
+      "Grilled Cheese Sandwich 🥪",
+      "Pancakes with Honey 🥞",
+      "Veggie Pizza 🍕",
+      "Tomato Soup 🍲"
+    ];
+
+    function getRecipe() {
+      const randomIndex = Math.floor(Math.random() * recipes.length);
+      document.getElementById("recipe").innerText = recipes[randomIndex];
+    }
+  </script>
+</body>
+</html>
